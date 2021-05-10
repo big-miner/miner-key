@@ -1,0 +1,48 @@
+[package]
+name = "miner-key"
+version = "0.1.0"
+authors = ["bingryan <bingryan@outlook.com>"]
+edition = "2018"
+license = "Apache-2.0"
+description = "substrate miner tools"
+readme = "README.md"
+repository = "https://github.com/substrate-miner/miner-key"
+homepage = "https://github.com/substrate-miner/miner-key"
+keywords = ["api", "substrate", "tools"]
+exclude = [
+    "docs/*",
+]
+
+[[bin]]
+path = "src/main.rs"
+name = "mkey"
+
+[dependencies]
+
+## json
+serde = "1.0.120"
+serde_json = "1.0.59"
+
+# tokio
+tokio = { version = "1.0.1", features = ["full"] }
+clap = "2.33.3"
+anyhow = "1.0.39"
+rpassword = "5.0"
+
+
+log = "0.4.11"
+env_logger = "0.8.2"
+yansi = "0.5"
+chrono = "0.4.19"
+
+rust-crypto = "^0.2"
+hex = "0.4"
+
+# words
+bip39 = "0.6.0-beta.1"
+x25519-dalek = "1.1.0"
+sp-core = { version = "3.0.0", package = "sp-core" }
+sp-runtime = { version = "3.0.0", package = "sp-runtime" }
+
+# format
+csv = "1.1"
