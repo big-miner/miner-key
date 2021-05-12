@@ -1,4 +1,15 @@
-# miner key
+<p align="center">
+  <img src="docs/logo.png" width="50%" syt height="50%" />
+</p>
+
+
+# miner-key: 波卡系矿工批量账号工具
+
+[discord交流社区](https://discord.gg/GnndMdD3)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
+
+-------
 
 ## develop install 
 
@@ -7,6 +18,26 @@ make install
 ```
 
 ## Usage
+
+
+### 生成一个substrate账号
+
+```html
+mkey generate --words 24 --network substrate
+```
+
+### 生成一个phala账号
+
+```html
+mkey generate --words 24 --network phala
+```
+
+### 生产一批账号到一个文件中
+
+
+```html
+mkey generate --words 24 --network phala -f csv -a 100 > pha.miner.csv  # 批量生成100个账号到 pha.miner.csv
+```
 
 ```html
 # generate substrate account
