@@ -1,8 +1,3 @@
-<p align="center">
-  <img src="docs/logo.png" width="50%" syt height="50%" />
-</p>
-
-
 # miner-key: 波卡系矿工批量账号工具
 
 [discord交流社区(有新需求可以提出来)](https://discord.gg/GnndMdD3)
@@ -14,6 +9,17 @@
 
 
 ## Usage
+
+### 安装
+
+下载 [miner-key-1.0.0.zip](https://github.com/big-miner/miner-key/releases/tag/release-1.0.0)
+
+```html
+
+unzip miner-key-1.0.0.zip
+cd  miner-key-1.0.0
+./install.sh
+```
 
 
 ### 生成一个substrate账号
