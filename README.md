@@ -59,10 +59,3 @@ mkey generate --words 24 --network phala
 # batch generate phala account pha.miner.csv
 mkey generate --words 24 --network phala -f csv -a 100 > pha.miner.csv  # 批量生成100个账号到 pha.miner.csv
 ```
-
-
-## chat
-
-<p align="center">
-  <img src="docs/wechat.png" width="50%" syt height="50%" />
-</p>
