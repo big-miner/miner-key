@@ -1,6 +1,5 @@
 # miner-key: 波卡系矿工批量账号工具
 
-[discord交流社区(有新需求可以提出来)](https://discord.gg/GnndMdD3)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 
@@ -58,4 +57,11 @@ mkey generate --words 24 --network phala
 }
 # batch generate phala account pha.miner.csv
 mkey generate --words 24 --network phala -f csv -a 100 > pha.miner.csv  # 批量生成100个账号到 pha.miner.csv
+```
+
+
+## develop
+
+```shell
+make install
 ```
