@@ -7,7 +7,7 @@ pub fn encode(message: &str, password: &str) -> Result<()> {
     let input_data: String = ["password", password].join("\\u0002");
     let secret_password = hex::encode(input_data.as_bytes());
 
-    let encrypted_data = encrypt(message.as_bytes(), &secret_password.as_ref(), secret_password[0..16].as_bytes()).ok()?;
+    let encrypted_data = encrypt(message.as_bytes(), &secret_password.as_ref(), secret_password[0..16].as_bytes())?;
     let obj = json!({
     				"message": message,
 					"encrypted data": hex::encode(&encrypted_data),

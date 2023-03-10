@@ -9,7 +9,7 @@ pub fn decode(message: &str, password: &str) -> Result<()> {
     let secret_password = hex::encode(input_data.as_bytes());
 
     let hex_de_message = hex::decode(message)?;
-    let decrypted_data = decrypt(&hex_de_message[..], &secret_password.as_ref(), secret_password[0..16].as_bytes()).ok()?;
+    let decrypted_data = decrypt(&hex_de_message[..], &secret_password.as_ref(), secret_password[0..16].as_bytes())?;
     let obj = json!({
     				"message": message,
 					"Decrypted data": str::from_utf8(&decrypted_data[..])?,

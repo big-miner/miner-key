@@ -1,7 +1,6 @@
 use std::error::Error as StdError;
 use std::fmt;
 use hex::FromHexError;
-use std::option::NoneError;
 use crypto::symmetriccipher::SymmetricCipherError;
 use core::array::TryFromSliceError;
 use std::str::Utf8Error;
@@ -25,7 +24,6 @@ pub enum ErrorKind {
     Serde(SerdeError),
     TryFromSlice(TryFromSliceError),
     SymmetricCipher(SymmetricCipherError),
-    None(NoneError),
 }
 
 
@@ -58,7 +56,6 @@ impl fmt::Display for Error {
             ErrorKind::SpParse(ref _e) => write!(f, "support network: https://github.com/paritytech/substrate/blob/master/primitives/core/src/crypto.rs"),
             ErrorKind::Csv(ref e) => write!(f, "{:?}", e),
             ErrorKind::Serde(ref e) => write!(f, "{:?}", e),
-            ErrorKind::None(ref e) => write!(f, "{:?}", e),
             ErrorKind::TryFromSlice(ref _e) => write!(f, "Check the length of public key and secret key for you input"),
             ErrorKind::SymmetricCipher(ref e) => write!(f, "{:?}", e),
             ErrorKind::FileNotFound => write!(f, "The accessed file does not exist"),
@@ -140,11 +137,6 @@ impl From<SymmetricCipherError> for Error {
     }
 }
 
-impl From<NoneError> for Error {
-    fn from(e: NoneError) -> Self {
-        Self { kind: ErrorKind::None(e), source: None }
-    }
-}
 
 impl From<::std::io::Error> for Error {
     fn from(e: ::std::io::Error) -> Self {

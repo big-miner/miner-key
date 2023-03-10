@@ -2,7 +2,7 @@
 name = "miner-key"
 version = "0.1.0"
 authors = ["bingryan <bingryan@outlook.com>"]
-edition = "2018"
+edition = "2021"
 license = "Apache-2.0"
 description = "substrate miner tools"
 readme = "README.md"
